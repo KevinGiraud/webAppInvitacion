@@ -1,6 +1,7 @@
 from django.shortcuts import render
-
+from .models import invitado
 # Create your views here.
 
 def home(request):
-    return render(request,"main.html")
+    invitados = invitado.all()
+    return render(request,"main.html",{'invitados':invitados})

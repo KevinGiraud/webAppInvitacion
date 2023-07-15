@@ -39,3 +39,56 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
     });
 });
+
+$(function(){
+    $('#countdown').countdown({
+      timezone: -3,
+      year: 2023, // YYYY Format
+      month: 11, // 1-12
+      day: 11, // 1-31
+      hour: 17, // 24 hour format 0-23
+      minute: 0, // 0-59
+      second: 0, // 0-59
+    });
+  });
+
+  $(function(){
+    $('#countdown').countdown({
+      onFinish: function () { 
+        // Do something
+      } 
+    });
+  });
+
+  $(window).scroll(function(){         
+    $('.container div, .container p').each(function(){
+        var scrollTop     = $(window).scrollTop(),
+        elementOffset = $(this).offset().top,
+        distance      = (elementOffset - scrollTop),
+        windowHeight  = $(window).height(),
+        breakPoint    = windowHeight*0.9;
+          
+  
+        if(distance > breakPoint) {
+          $(this).addClass("more-padding"); 
+        }  if(distance < breakPoint) {
+          $(this).removeClass("more-padding");  
+        }
+
+        breackCard    = windowHeight*0.9;
+        if (scrollTop > breackCard) {
+          $(".card").addClass("slide-up");
+        }else if (scrollTop < breackCard) {
+          $(".card").removeClass("slide-up");
+        }
+    });
+  });
+
+  $(document).ready(function(){
+    $("#tittlewedding").hide().slideDown(1200);
+    $("#subTittlewedding").hide().slideDown(1200);
+    $("#countdown").hide().slideDown(1200);
+    $(".sticky-top img").css("width", "0px");
+    $(".sticky-top img").animate({width: '60%'}, 2000);
+  });
+  

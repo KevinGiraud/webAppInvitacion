@@ -83,7 +83,6 @@ body {
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
-  /*color: #969672;*/
   row-gap: 1rem;
   text-align: center;
 }
@@ -91,8 +90,6 @@ body {
 .buffer {
   width: 100%;
   min-height: 60vh;
-  /*border-top: 20px solid var(--color);
-  border-bottom: 20px solid var(--color);*/
 }
 
 .parallax-container2 {
@@ -103,7 +100,6 @@ body {
 
 h1 {
   font-size: 8rem;
-  /*font-weight: 700;*/
 }
 
 p {

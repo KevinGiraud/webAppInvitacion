@@ -75,7 +75,7 @@ $(function(){
           $(this).removeClass("more-padding");  
         }
 
-        breackCard    = windowHeight*0.9;
+        breackCard    = windowHeight*1.2;
         if (scrollTop > breackCard) {
           $(".card").addClass("slide-up");
         }else if (scrollTop < breackCard) {

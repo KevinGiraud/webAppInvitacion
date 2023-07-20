@@ -454,7 +454,7 @@ transition: all 0.7s ease-in-out;
 */ 
 
 .carousel-item {
-  height: 100vh;
+  height: 40vh;
   min-height: 350px;
   background: no-repeat center center scroll;
   -webkit-background-size: cover;
@@ -491,4 +491,14 @@ bgc2, .vLine, .hLine {
 .services-icon {
     font-size: 60px;
     margin-left: 2rem;
+}
+
+.carousel-caption {
+  background: #22222275;
+  font-family: 'Antonio', sans-serif;
+}
+
+.lead{
+  color: #789b77;
+  text-transform: uppercase;
 }

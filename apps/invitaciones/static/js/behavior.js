@@ -29,7 +29,7 @@ sr.reveal('#testimonial div', {
     distance: '300px',
     viewFactor: 0.2
 });
-
+/*
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -39,7 +39,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
     });
 });
-
+*/
 $(function(){
     $('#countdown').countdown({
       timezone: -3,

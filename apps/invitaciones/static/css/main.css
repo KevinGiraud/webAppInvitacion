@@ -502,3 +502,7 @@ bgc2, .vLine, .hLine {
   color: #789b77;
   text-transform: uppercase;
 }
+
+.modal.fade .modal-dialog {
+  transition: transform 0.5s ease-out;
+}

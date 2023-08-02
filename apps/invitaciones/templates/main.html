@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+
+    <meta charset="UTF-8"/>
+    <title>Bootstrap Website Two</title>
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Antonio:wght@100;300&display=swap" rel="stylesheet">
+    
+    <!-- BOOTSTRAP 4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- SCROOLL REVEAL JS LIBRARY CDN -->
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="{% static 'css/main.css'%}">
+    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+  </head>
+  <body>
+    <section class="parallax-container" id="Home" style = "background-image: url({% static 'img/paralax1back.jpg' %})">
+      <div class="text-center" id="Ready1">
+        <h2 Id="tittlewedding">Kevin + Belen</h2>
+        <h2  Id="subTittlewedding">11 De Noviembre 2023</h2>
+      </div>
+      <div id="countdown" class="row htmlbodyClock justify-content-center align-items-center "></div>
+      <div class="sticky-top">
+        <img src="{% static 'img/AvionBase.png' %}"  >
+      </div>
+    </section>
+
+    <section class="buffer light">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One - Set the background image for this slide in the line below -->
+          <div class="carousel-item active" style="background-image: url({% static 'img/cortaderas.jpg' %})">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">Lugar</h2>
+              <p class="lead">This is a description for the first slide.</p>
+            </div>
+          </div>
+          <!-- Slide Two - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url({% static 'img/cortaderas.jpg' %})">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">Regalos</h2>
+              <p class="lead">This is a description for the second slide.</p>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <div class="carousel-item" style="background-image: url({% static 'img/cortaderas.jpg' %})">
+            <div class="carousel-caption d-none d-md-block">
+              <h2 class="display-4">Fiesta</h2>
+              <p class="lead">This is a description for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+      </div>
+    </section>
+
+    <section class="parallax-container parallax-container2" style = "background-image: url({% static 'img/pexels-taryn-elliott-5405598 copy.jpg' %})">
+
+      <div class="container text-center">
+        <div class="col-md-12">
+          <h1>Nuestra  Fiesta</h1>
+          <p class="subtitle">Hagamos juntos una fiesta épica. Aquí algunos detalles a tener en cuenta.</p>
+        </div>
+        <div class="row align-items-center">
+          <div class="card-deck">
+            <div class="card" style="width: 21rem;">
+              <img class="card-img-top" src="{%static 'img/gift.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Regalos</h5>
+                <p class="card-text">Algun texto de ejemplo para construir sobre el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
+                <a href="#" class="card-link">Ver Mas</a>
+              </div>
+            </div>
+          
+          
+            <div class="card" style="width: 21rem;">
+              <img class="card-img-top" src="{%static 'img/music.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Musica</h5>
+                <p class="card-text">Algun texto de ejemplo para construir sobre el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
+                <a href="#" class="card-link">Sugerir Temas</a>
+              </div>
+            </div>
+          
+          
+            <div class="card" style="width: 21rem;">
+              <img class="card-img-top" src="{%static 'img/dresscode.jpg' %}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Dress Code</h5>
+                <p class="card-text">Algun texto de ejemplo para construir sobre el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
+                <a href="#" class="card-link" data-toggle="modal" data-target="#idDelModal">+ Info</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="buffer" style = "background-image: url({% static 'img/bufferbackground.jpg' %}); background-size: cover; background-repeat: no-repeat;   background-position: inherit; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
+      <div class="container text-center">
+        <div class="row justify-content-center align-items-center">
+          <div class="card bottom-card">
+            <div class="bufferinfo"> Te Invitamos a Nuestro Casamiento </div>
+            <div class="bufferdata">Confirma tu asistencia</div>
+            <div class="card-body">
+              <form>
+                <div class="mb-3">
+                  <input type="email" class="form-control form-inputField" id="floatingInputValue" placeholder="Nombre Completo" >
+                  
+                </div>
+                <div class="mb-3">
+                  <input type="email" class="form-control form-inputField" id="floatingInputValue" placeholder="Direccion de Emial" >
+                </div>
+                <div class="input_container">
+                  <div class="mb-3 input-flex">
+                    <input type="email" class="form-control form-inputField-particular" id="floatingInputValue" placeholder="Numero de acompañantes" >
+                    
+                  </div>
+                  <div class="mb-3 input-flex">
+              
+                    <select class="form-select form-inputField-particular" aria-label="Preferencia de comida">
+                      <option selected>Abri y selecciona</option>
+                      <option value="1">Vegetariano</option>
+                      <option value="2">Celiaco</option>
+                      <option value="3">Vegano</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <textarea class="form-control form-inputField" placeholder="Mensaje" id="floatingTextarea"></textarea>
+                </div>
+                <!--<a href="#" type="submit" class="card-link">Enviar</a>-->
+                <button type="submit" class="btn btn-link card-link">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="modal fade" id="idDelModal">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- SCROOLL REVEAL SCRIPT -->
+
+    <script src="{%static 'js/popper.min.js'%}"></script>
+    <script src="{%static 'plugins/countdown-timezone/js/countdown.jquery.js'%}"></script>
+    <script src="{% static 'js/behavior.js'%}"></script>
+  </body>
+    
+  <!--</body>-->
+</html>

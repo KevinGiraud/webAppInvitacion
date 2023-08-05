@@ -45,7 +45,7 @@
           <div class="carousel-item active" style="background-image: url({% static 'img/cortaderas.jpg' %})">
             <div class="carousel-caption d-none d-md-block">
               <h2 class="display-4">Lugar</h2>
-              <p class="lead">This is a description for the first slide.</p>
+              <p class="lead"><a href="#" class="card-link" data-toggle="modal" data-target="#idDelModal">Cortaderas - Dique Lujan</a></p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
@@ -108,14 +108,14 @@
               <div class="card-body">
                 <h5 class="card-title">Dress Code</h5>
                 <p class="card-text">Algun texto de ejemplo para construir sobre el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
-                <a href="#" class="card-link" data-toggle="modal" data-target="#idDelModal">+ Info</a>
+                <a href="#" class="card-link">+ Info</a>
               </div>
             </div>
           </div>
       </div>
     </section>
 
-    <section class="buffer" style = "background-image: url({% static 'img/bufferbackground.jpg' %}); background-size: cover; background-repeat: no-repeat;   background-position: inherit; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
+    <section class="buffer-bottom" style = "background-image: url({% static 'img/bufferbackground.jpg' %}); background-size: cover; background-repeat: no-repeat;   background-position: inherit; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
       <div class="container text-center">
         <div class="row justify-content-center align-items-center">
           <div class="card bottom-card">
@@ -124,11 +124,11 @@
             <div class="card-body">
               <form>
                 <div class="mb-3">
-                  <input type="email" class="form-control form-inputField" id="floatingInputValue" placeholder="Nombre Completo" >
+                  <input  type="email" class="form-control form-inputField" id="floatingInputValue" placeholder="Nombre Completo" >
                   
                 </div>
                 <div class="mb-3">
-                  <input type="email" class="form-control form-inputField" id="floatingInputValue" placeholder="Direccion de Emial" >
+                  <input type="email" required="true" class="form-control form-inputField" id="floatingInputValue" placeholder="Direccion de Emial" >
                 </div>
                 <div class="input_container">
                   <div class="mb-3 input-flex">
@@ -146,7 +146,7 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control form-inputField" placeholder="Mensaje" id="floatingTextarea"></textarea>
+                  <textarea class="form-control form-inputField" placeholder="Si te animas podes sugerir un tema" id="floatingTextarea"></textarea>
                 </div>
                 <!--<a href="#" type="submit" class="card-link">Enviar</a>-->
                 <button type="submit" class="btn btn-link card-link">Submit</button>
@@ -161,19 +161,19 @@
     <div class="modal fade" id="idDelModal">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+          <div class="modal-header modalMod">
+            <!--<h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>-->
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            ...
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.9229282183824!2d-58.66978662347201!3d-34.37788044560786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca1620ee747f7%3A0xbd50d5eee0999156!2sLas%20Cortaderas!5e0!3m2!1ses-419!2sar!4v1691203719128!5m2!1ses-419!2sar" width="460" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div class="modal-footer">
+          <!--<div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+          </div>-->
         </div>
       </div>
     </div>

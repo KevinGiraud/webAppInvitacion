@@ -89,6 +89,11 @@ body {
 
 .buffer {
   width: 100%;
+  min-height: 35vh;
+}
+
+.buffer-bottom {
+  width: 100%;
   min-height: 60vh;
 }
 
@@ -505,4 +510,8 @@ bgc2, .vLine, .hLine {
 
 .modal.fade .modal-dialog {
   transition: transform 0.5s ease-out;
+}
+
+.modalMod {
+  border-bottom: none;
 }

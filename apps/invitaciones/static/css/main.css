@@ -363,7 +363,7 @@ transition: all 0.7s ease-in-out;
 }
 .bufferinfo {
   font-family: 'Alex Brush', cursive;
-  font-size: 3rem;
+  font-size: 2.7vh;
   color: #000000;
 }
 
@@ -404,7 +404,7 @@ transition: all 0.7s ease-in-out;
 .bottom-card {
   background-color: #ffffff00;
   border: 1px solid #ffffff00;
-  font-size: 1rem;
+  font-size: 1.2vh;
   width: 1000px;
   margin-top: 50px;
 }
@@ -415,6 +415,7 @@ transition: all 0.7s ease-in-out;
   border-left: hidden;
   border-radius: initial;
   width: 600px;
+  font-size: 1vh;
 }
 
 .sticky-top img {
@@ -435,6 +436,7 @@ transition: all 0.7s ease-in-out;
   border-left: hidden;
   border-radius: initial;
   width: 300px;
+  font-size: 1vh;
 }
 
 @media (max-width: 576px) {

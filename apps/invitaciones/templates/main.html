@@ -122,31 +122,31 @@
             <div class="bufferinfo"> Te Invitamos a Nuestro Casamiento </div>
             <div class="bufferdata">Confirma tu asistencia</div>
             <div class="card-body">
-              <form>
+              <form action="/addInvitados/" method="POST"> {% csrf_token %}
                 <div class="mb-3">
-                  <input  type="email" class="form-control form-inputField" id="floatingInputValue" placeholder="Nombre Completo" >
+                  <input  type="text" class="form-control form-inputField" id="floatingInputValuefullName" name="floatingInputValuefullName" placeholder="Nombre Completo" >
                   
                 </div>
                 <div class="mb-3">
-                  <input type="email" required="true" class="form-control form-inputField" id="floatingInputValue" placeholder="Direccion de Emial" >
+                  <input type="email" required="true" class="form-control form-inputField" id="floatingInputValueEmail" name="floatingInputValueEmail" placeholder="Direccion de Emial" >
                 </div>
                 <div class="input_container">
                   <div class="mb-3 input-flex">
-                    <input type="email" class="form-control form-inputField-particular" id="floatingInputValue" placeholder="Numero de acompañantes" >
+                    <input type="text" class="form-control form-inputField-particular" id="floatingInputValueNumber" name="floatingInputValueNumber" placeholder="Numero de acompañantes" >
                     
                   </div>
                   <div class="mb-3 input-flex">
               
-                    <select class="form-select form-inputField-particular" aria-label="Preferencia de comida">
+                    <select class="form-select form-inputField-particular" aria-label="Preferencia de comida" id="floatingInputValueFood" name="floatingInputValueFood">
                       <option selected>Abri y selecciona</option>
-                      <option value="1">Vegetariano</option>
-                      <option value="2">Celiaco</option>
-                      <option value="3">Vegano</option>
+                      <option value="vegetariano">Vegetariano</option>
+                      <option value="celiaco">Celiaco</option>
+                      <option value="vegano">Vegano</option>
                     </select>
                   </div>
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control form-inputField" placeholder="Si te animas podes sugerir un tema" id="floatingTextarea"></textarea>
+                  <textarea class="form-control form-inputField" placeholder="Si te animas podes sugerir un tema" id="floatingTextareaSong" name="floatingTextareaSong"></textarea>
                 </div>
                 <!--<a href="#" type="submit" class="card-link">Enviar</a>-->
                 <button type="submit" class="btn btn-link card-link">Submit</button>

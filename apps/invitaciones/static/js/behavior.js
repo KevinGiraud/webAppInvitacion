@@ -92,3 +92,25 @@ $(function(){
     $(".sticky-top img").animate({width: '60%'}, 2000);
   });
   
+  function getPlace(){
+    let item = 'Las+Cortaderas/@-34.3778849,-58.6672117,17z/data=!3m1!4b1!4m6!3m5!1s0x95bca1620ee747f7:0xbd50d5eee0999156!8m2!3d-34.3778849!4d-58.6672117!16s%2Fg%2F11h7c4snj7?entry=ttu'
+    if(item){
+      //window.open('https://google.cl/maps/place/'+item);
+      window.open('https://google.cl/maps/search/?api=1&query=Las+Cortaderas+-+Espacio+para+Eventos+Sociales+y+Corporativos+-+Fiestas,+Casamientos+y+Cumpleaños');
+    }  
+    return false; //No ejecutar el evento.
+  }
+  //a revisar
+  let tittlewedding = ['Kevin + Belen ', 'Te Invitamos a Compartir '];
+  let subTittlewedding = ['11 De Noviembre 2023', 'Este Gran Momento Con Nosotros'];
+  let n = 0; //un contador utilizado como index del array texto1 y texto2
+  setInterval (function () {
+    $("#tittlewedding").fadeOut(function() {
+        $(this).html(tittlewedding [n%tittlewedding.length]).fadeIn();
+    });
+    $("#subTittlewedding").fadeOut(function() {
+        $(this).html(subTittlewedding [n%subTittlewedding.length]).fadeIn();
+    });
+    n++;
+}, 10000);
+  

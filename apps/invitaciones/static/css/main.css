@@ -384,10 +384,12 @@ transition: all 0.7s ease-in-out;
 
 .card-link:hover {
   color: #789b77;
+  
 }
 
 .card-link {
   transition: color 0.5s;
+  font-size: 1.2rem;
 }
 
 .zoom {
@@ -469,10 +471,10 @@ transition: all 0.7s ease-in-out;
   -o-background-size: cover;
   background-size: cover;
 }
-section {
+/*section {
   padding-top: 5rem;
   padding-bottom: 5rem;
-}
+}*/
 
 .lnr {
   display: inline-block;
@@ -517,3 +519,46 @@ bgc2, .vLine, .hLine {
 .modalMod {
   border-bottom: none;
 }
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.card-text{
+  font-size: 1rem;
+}
+
+.display-4, .lead {
+  transition: transform 1s ease-in-out;
+}
+
+.carousel-item-next .display-4,
+.carousel-item-prev .display-4,
+.carousel-item.active.right .display-4,
+.carousel-item.active.left .display-4,
+.carousel-item-next .lead,
+.carousel-item-prev .lead,
+.carousel-item.active.right .lead,
+.carousel-item.active.left .lead {
+  transform: translateX(100%);
+}
+
+.carousel-item {
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active.right,
+.carousel-item.active.left {
+  transform: translateY(-100%);
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right {
+  transform: translateY(100%);
+}
+
+/*Testing Area*/

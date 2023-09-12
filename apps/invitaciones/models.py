@@ -16,7 +16,7 @@ class Invitado(models.Model):
 
 class Tema(models.Model):
     texto = models.TextField()
-    invitado = models.ForeignKey(Invitado, on_delete=models.CASCADE)
+    invitado = models.ForeignKey(Invitado, blank=True, null=True, on_delete=models.CASCADE)
 
     def __str__(self):
         descript = '{0} invitado : {1}'

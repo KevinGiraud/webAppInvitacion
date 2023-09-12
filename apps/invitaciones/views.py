@@ -18,3 +18,8 @@ def addInvitados(request):
     invitado = Invitado.objects.create(email = email, nombre_completo = fullName, acompanantes = selfplus, tipo_comida = foodtype) 
     tema = Tema.objects.create(texto = song, invitado = invitado)
     return redirect('/')
+
+def addTema (request):
+    song = request.POST['songIndividual']
+    tema = Tema.objects.create(texto = song)
+    return redirect('/')

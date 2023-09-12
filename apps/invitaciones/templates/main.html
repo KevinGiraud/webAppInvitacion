@@ -4,7 +4,7 @@
     {% load static %}
     <meta charset="UTF-8"/>
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">-->
-    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1.3">
+    <meta name="viewport" content="width=device-width, initial-scale=0.65, maximum-scale=1.3">
     <title>Bootstrap Website Two</title>
     <!-- GOOGLE FONT -->
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet" />
@@ -18,15 +18,35 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <!-- SCROOLL REVEAL JS LIBRARY CDN -->
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css"></script>
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.0.5/flickity.min.css"></link>
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="{% static 'css/main.css'%}">
     <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
   </head>
   <body>
-    <section class="parallax-container" id="Home" style = "background-image: url({% static 'img/paralax1back.jpg' %})">
+    <!--<nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Kevin + Belen</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#Home">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Regalos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tema musical y código de vestimenta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#RSVP">R.S.V.P.</a>
+          </li>
+        </ul>
+      </div>
+    </nav>-->
+    <section class="parallax-container" id="Home" style = "background-image: url({% static 'img/paralax1back copy 2.jpg' %});  object-fit: contain; background-position: top left; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;  background-attachment: scroll;">
       <div class="text-center" id="Ready1">
         <h2 Id="tittlewedding">Kevin + Belen</h2>
         <h2  Id="subTittlewedding">11 De Noviembre 2023</h2>
@@ -35,6 +55,11 @@
       <div class="sticky-top">
         <img src="{% static 'img/AvionBase.png' %}"  >
       </div>
+        <div id="about-us-section modifier-us-section">
+          <div class="about-us-info modifier-us-info">
+            <a href="#" title="Confirmar Asistencia" data-toggle="modal" data-target="#modalInvite">CONFRIMAR ASISTENCIA</a>
+          </div>
+        </div>
     </section>
 
     <section class="buffer light " >
@@ -43,28 +68,20 @@
         <ol class="carousel-indicators">
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
           
-          <div class="carousel-item active" style="background-image: url({% static 'img/cortaderas.jpg' %})">
-            <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-item active" style = "background-image: url({% static 'img/Cortaderas2.jpg' %});  object-fit: cover; background-position: top left; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
+            <div class="carousel-caption">
               <h2 class="display-4">Lugar</h2>
               <p class="lead"><a href="#" onclick="getPlace();" class="card-link">Cortaderas - Dique Lujan</a></p>
             </div>
           </div>
           
-          <div class="carousel-item" style="background-image: url({% static 'img/cortaderas.jpg' %})">
-            <div class="carousel-caption d-none d-md-block">
+          <div class="carousel-item" style = "background-image: url({% static 'img/Cortaderas3.jpg' %});  object-fit: cover; background-position: top left; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
+            <div class="carousel-caption">
               <h2 class="display-4">Regalos</h2>
-              <p class="lead">This is a description for the second slide.</p>
-            </div>
-          </div>
-         
-          <div class="carousel-item" style="background-image: url({% static 'img/cortaderas.jpg' %})">
-            <div class="carousel-caption d-none d-md-block">
-              <h2 class="display-4">Fiesta</h2>
-              <p class="lead">This is a description for the third slide.</p>
+              <p class="lead"><a href="#" class="card-link" data-toggle="modal" data-target="#modalRegalos">+ INFO</a></p>
             </div>
           </div>
         </div>
@@ -78,48 +95,38 @@
             </a>
       </div>
     </section>
-
-    <section class="parallax-container parallax-container2" style = "background-image: url({% static 'img/paralax1back.jpg' %})">
-      <div class="row  mx-md-n5">
-        <!--<div class="col-md-6 col-sm-3">
-            <div class="card" style="width: 19rem;">
-              <img class="card-img-top" src="{%static 'img/gift.jpg' %}" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Regalos</h5>
-                <p class="card-text">Algun texto de ejemplo para construir sobre el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
-                <a href="#" class="card-link">Ver Mas</a>
-              </div>
-            </div>
-        </div> -->
-        <div class="col-md-6 col-sm-3">
-            <div class="card" style="width: 23rem;">
-              <img class="card-img-top" src="{%static 'img/music.jpg' %}" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">MUSICA</h5>
-                <p class="card-text">Algun texto de ejemplo para construir sobre el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
-                <a href="#floatingTextareaSong" class="card-link">Sugerir Temas</a>
-              </div>
-            </div>
-        </div>  
-        <div class="col-md-6 col-sm-3">
-            <div class="card" style="width: 23rem;">
-              <img class="card-img-top" src="{%static 'img/dresscode.jpg' %}" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">DRESS CODE</h5>
-                <p class="card-text">Algun texto de ejemplo para construir sobre el título de la tarjeta y formar la mayor parte del contenido de la tarjeta.</p>
-                <a href="#" class="card-link">+ Info</a>
-              </div>
-            </div>
+    <section class="parallax-container parallax-container2">
+      <div class="we-are-block">
+        <div id="about-us-section">
+          <div class="about-us-image">
+            <img src="{%static 'img/pexels-danik-prihodko-15964937.jpg' %}" width="808" height="458" alt="Lobby Image">
+          </div>
+          <div class="about-us-info fade-in-section">
+            <h2>Música</h2>
+            <p>
+              La música es una parte fundamental en cualquier celebración, y como queremos que este sea un festejo inolvidable y para todos los gustos, los invitamos a que nos ayuden a elegir la música con la que vamos a bailar toda la noche. Para ello nos pueden dejar todas sus sugerencias simplemente escribiendo aquí sus elecciones. Gracias por formar parte de este momento junto a nosotros.
+            </p>
+            <a href="#" title="About Us Button" data-toggle="modal" data-target="#modalSong">AGREGAR UN TEMA</a>
+          </div>
+        </div>
+        <div id="history-section">
+          <div class="history-image">
+            <img src="{%static 'img/wepik-export-20230903030046aAgJ.png' %}" width="951" height="471" alt="Building Pic">
+          </div>
+          <div class="history-info fade-in-section">   
+            <h2>Dress Code</h2>
+            <p>Solo tenemos un pedido: queremos que estén todos cómodos, que salten, bailen sin preocuparse por el gemelo al día siguiente. ¿Y qué me pongo? Se pueden preguntar, si querés ponerte tu mejor outfit, ponételo. Si querés ponerte algo ridículo, ponételo. Si querés venir canchero/a o querés venir formal este es el lugar.</p>
+            <!--<a href="#" title="History Button" onclick= "openModal()" >+ INFORMACION</a>-->
+          </div>
         </div>
       </div>
     </section>
-
-    <section class="buffer-bottom" style = "background-image: url({% static 'img/bufferbackground.jpg' %}); background-size: cover; background-repeat: no-repeat;   background-position: inherit; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
-      <div class="container text-center">
+    <section class="buffer-bottom" id="RSVP" >
+      <!--<div class="container text-center">
         <div class="row justify-content-center align-items-center">
           <div class="card bottom-card">
             <div class="bufferinfo"> Te Invitamos a Nuestro Casamiento </div>
-            <div class="bufferdata">Confirma tu asistencia</div>
+            <div class="bufferdata" >CONFRIMA TU ASISTENCIA</div>
             <div class="card-body">
               <form action="/addInvitados/" method="POST"> {% csrf_token %}
                 <div class="mb-3">
@@ -127,17 +134,17 @@
                   
                 </div>
                 <div class="mb-3">
-                  <input type="email" required="true" class="form-control form-inputField" id="floatingInputValueEmail" name="floatingInputValueEmail" placeholder="Direccion de Emial" >
+                  <input type="email" required="true" class="form-control form-inputField" id="floatingInputValueEmail" name="floatingInputValueEmail" placeholder="Direccion de E-Mail" >
                 </div>
                 <div class="input_container">
                   <div class="mb-3 input-flex">
-                    <input type="text" class="form-control form-inputField-particular" id="floatingInputValueNumber" name="floatingInputValueNumber" placeholder="Numero de acompañantes" >
+                    <input type="text" class="form-control form-inputField-particular" id="floatingInputValueNumber" name="floatingInputValueNumber" placeholder="Cantidad de acompañantes" >
                     
                   </div>
                   <div class="mb-3 input-flex">
               
                     <select class="form-select form-inputField-particular" aria-label="Preferencia de comida" id="floatingInputValueFood" name="floatingInputValueFood">
-                      <option selected>Abri y selecciona</option>
+                      <option selected>Restricciones alimentarias</option>
                       <option value="vegetariano">Vegetariano</option>
                       <option value="celiaco">Celiaco</option>
                       <option value="vegano">Vegano</option>
@@ -145,43 +152,115 @@
                   </div>
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control form-inputField" placeholder="Si te animas podes sugerir un tema" id="floatingTextareaSong" name="floatingTextareaSong"></textarea>
+                  <textarea class="form-control form-inputField" placeholder="Si te animas podes sugerir una cancion" id="floatingTextareaSong" name="floatingTextareaSong"></textarea>
                 </div>
-                <!--<a href="#" type="submit" class="card-link">Enviar</a>-->
-                <button type="submit" class="btn btn-link card-link">Submit</button>
+                <button type="submit" class="btn btn-link card-link">CONFIRMAR</button>
               </form>
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
     </section>
 
 
-    <div class="modal fade" id="idDelModal">
+    <div class="modal fade" id="modalRegalos">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header modalMod">
-            <!--<h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>-->
+
+            <h5 class="modal-title col-11 text-center" id="exampleModalCenterTitle">PARA COLABORAR CON LA LUNA DE MIEL</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3292.9229282183824!2d-58.66978662347201!3d-34.37788044560786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca1620ee747f7%3A0xbd50d5eee0999156!2sLas%20Cortaderas!5e0!3m2!1ses-419!2sar!4v1691203719128!5m2!1ses-419!2sar" width="460" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <br>
+            CBU: 
+
           </div>
-          <!--<div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>-->
         </div>
       </div>
     </div>
     
+    <div class="modal fade" id="modalSong">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header modalMod">
+            <h5 class="modal-title col-11 text-center" id="exampleModalCenterTitle">SI TE ANIMAS PODES SUGERIR UNA CANCION</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form action="/addTema/" method="POST"> {% csrf_token %}
+              <div class="mb-3">
+                <textarea required="true" class="form-control" placeholder="" id="songIndividual" name="songIndividual"></textarea>
+              </div>
+              <button type="submit" class="btn btn-link card-link">CONFIRMAR</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalInvite">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content" style = "background-image: url({% static 'img/bufferbackground.jpg' %}); background-size: cover; background-repeat: no-repeat;   background-position: inherit; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;">
+          <div class="modal-header modalMod">
+            <!--<h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>-->
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container text-center">
+              <div class="row justify-content-center align-items-center">
+                <div class="card bottom-card">
+                  <div class="bufferinfo"> Te Invitamos a Nuestro Casamiento </div>
+                  <div class="bufferdata" >CONFRIMA TU ASISTENCIA</div>
+                  <div class="card-body">
+                    <form action="/addInvitados/" method="POST"> {% csrf_token %}
+                      <div class="mb-3 ">
+                        <input  type="text" class="form-control form-inputField" id="floatingInputValuefullName" name="floatingInputValuefullName" placeholder="Nombre Completo" >
+                        
+                      </div>
+                      <div class="mb-3 ">
+                        <input type="email" required="true" class="form-control form-inputField" id="floatingInputValueEmail" name="floatingInputValueEmail" placeholder="Direccion de E-Mail" >
+                      </div>
+                      <div class="input_container">
+                        <div class="mb-3  input-flex">
+                          <input type="text" class="form-control form-inputField-particular" id="floatingInputValueNumber" name="floatingInputValueNumber" placeholder="Cantidad de acompañantes" >
+                          
+                        </div>
+                        <div class="mb-3  input-flex">
+                    
+                          <select class="form-select form-inputField-particular" aria-label="Preferencia de comida" id="floatingInputValueFood" name="floatingInputValueFood">
+                            <option selected>Restricciones alimentarias</option>
+                            <option value="vegetariano">Vegetariano</option>
+                            <option value="celiaco">Celiaco</option>
+                            <option value="vegano">Vegano</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="mb-3 ">
+                        <textarea class="form-control form-inputField" placeholder="Si te animas podes sugerir una cancion" id="floatingTextareaSong" name="floatingTextareaSong"></textarea>
+                      </div>
+                      <!--<a href="#" type="submit" class="card-link">Enviar</a>-->
+                      <button type="submit" class="btn btn-link card-link">CONFIRMAR</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- SCRIPTS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
     <!-- SCROOLL REVEAL SCRIPT -->
 
     <script src="{%static 'js/popper.min.js'%}"></script>
